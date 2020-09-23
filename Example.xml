@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE folders [ 
+<!ELEMENT folders (folder|file)+>
+<!ELEMENT folder (file| folder)*>
+<!ELEMENT file (TITLE, URL)>
+<!ELEMENT TITLE (#PCDATA)>
+<!ELEMENT URL (#PCDATA)>
+<!ATTLIST folders
+DIRNAME CDATA #REQUIRED
+ID ID #REQUIRED
+>
+<!ATTLIST folder
+DIRNAME CDATA #REQUIRED
+ID ID #REQUIRED
+>
+<!ATTLIST file
+FILENAME CDATA #REQUIRED
+ID ID #REQUIRED
+>
+<!ATTLIST TITLE
+ID ID #REQUIRED
+>
+<!ATTLIST URL
+ID ID #REQUIRED
+>
+]>
+<?xml-stylesheet type="text/xsl" href="c:\temp\TreeDesign.xsl"?>
+<folders ID="ID1" DIRNAME="New Root">
+	<folder ID="ID2" DIRNAME="New Folder">
+		<file ID="ID3" FILENAME="New File">
+			<TITLE ID="ID4">Title</TITLE>
+			<URL ID="ID5">URL</URL>
+		</file>
+	</folder>
+</folders>
